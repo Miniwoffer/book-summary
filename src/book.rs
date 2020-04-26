@@ -206,7 +206,6 @@ fn make_title_case(name: &str) -> String {
     titlecase(
         &name
             .chars()
-            .skip_while(|c| !c.is_alphabetic())
             .map(|c| if c == '_' { ' ' } else { c })
             .collect::<String>(),
     )
